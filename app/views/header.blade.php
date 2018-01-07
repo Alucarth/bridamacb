@@ -81,7 +81,7 @@
 
        @yield('head')
   </head>
-  <body id="logo" class="hold-transition skin-blue-light sidebar-mini">
+  <body id="logo" class="hold-transition skin-blue-light fixed sidebar-mini">
 
 {{-- Menu David --}}
  <div class="wrapper">

@@ -101,7 +101,7 @@ Route::group(array('before' => 'auth.basic'), function()
 {
    Route::resource('pos','PosController');
 
-   Route::get('cliente/{nit}','PosController@cliente');
+   Route::get('clientepos/{nit}','PosController@cliente');
    Route::post('guardarCliente','PosController@guardarCliente');
    Route::post('guardarFactura','PosController@guardarFactura');
    Route::post('guardarFacturaG','PosController@guardarFacturaG');

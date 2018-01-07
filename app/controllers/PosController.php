@@ -373,7 +373,7 @@ class PosController extends \BaseController {
 	     $invoice->phone = $branch->work_phone;
 
 	     	$type_document =TypeDocument::where('account_id',Auth::user()->account_id)->firstOrFail();
-	    $invoice->javascript=$type_document->javascript_pos;;
+	    $invoice->javascript=1;
 	     	$invoice->sfc = $branch->sfc;
 			$invoice->qr =$invoice->account_nit.'|'.$invoice->invoice_number.'|'.$invoice->number_autho.'|'.$invoice->invoice_date.'|'.$invoice->importe_neto.'|'.$invoice->importe_total.'|'.$invoice->client_nit.'|'.$invoice->importe_ice.'|0|0|'.$invoice->descuento_total;
 			if($account->is_uniper)
@@ -381,7 +381,7 @@ class PosController extends \BaseController {
 				$invoice->account_uniper = $account->uniper;
 			}
 
-			$invoice->logo = $type_document->logo;
+			$invoice->logo = 2;
 
 	     $invoice->save();
 

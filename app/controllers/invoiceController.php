@@ -1280,7 +1280,7 @@ echo "facturas agregadas<br><br><br><br><br>";
                 'phone',
                 'document_number')
                 );
-
+        // dd(json_encode($invoice));
 
 		$account = Account::find(Auth::user()->account_id);
 		//return $invoice['id'];
@@ -1472,9 +1472,9 @@ echo "facturas agregadas<br><br><br><br><br>";
 
 
 
-            // if($invoice->logo=="1")
-            // $invoice->javascript = $document->javascript_web;
-            // else
+            if($invoice->logo=="1")
+            $invoice->javascript = $document->javascript_web;
+            else
             $invoice->javascript=  $document->javascript_pos;
             $invoice->logo = $document->logo;
             //echo $invoice->javascript." ";
